@@ -19,12 +19,8 @@ describe("Callback - fs.readFile를 콜백 패턴만 사용", () => {
   
   test("assets/first.json에서 불러온 second_key를 이용해 second.json에서 key에 일치하는 오브젝트 찾기", (done) => {
     function callback(result) {
-      // try{
-        expect(result).toBe("Second 방가방가");
-        done();
-      // } catch (error) {
-      //   done(error);
-      // }
+      expect(result).toBe("Second 방가방가");
+      done();
     }
     secondData(callback);
   });
@@ -38,12 +34,8 @@ describe("Callback - fs.readFile를 콜백 패턴만 사용", () => {
 
   test("assets/second.json에서 불러온 third_key를 이용해 third.json에서 key에 일치하는 오브젝트 찾기", (done) => {
     function callback(result) {
-      // try{
-        expect(result).toBe("Third 방가방가");
-        done();
-    //   }catch(error) {
-    //     done(error);
-    // }
+      expect(result).toBe("Third 방가방가");
+      done();
   }
   thirdData(callback);
   });
